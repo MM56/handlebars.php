@@ -123,6 +123,7 @@ class FilesystemLoader implements Loader
         $fileName = $this->getFileName($name);
 
         if ($fileName === false) {
+            return "";
             throw new \InvalidArgumentException('Template ' . $name . ' not found.');
         }
 
